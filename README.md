@@ -1,5 +1,5 @@
 # 💫 About Me:
-🔭 I’m currently working on CAD<br><br>🤝 I’m looking for help with CAD designing<br><br>👨‍💻 All of my projects are available at www.hasnat4763.me<br><br>💬 Ask me about Python, Godot, Some Electronics and Fabric modding maybe<br><br>📫 How to reach me abulhasnat5737@gmail.com<br><br>⚡ Fun fact I think I am dumber than all
+🔭 I’m currently working on learning CAD<br><br>🤝 I’m looking for help with CAD designing<br><br>👨‍💻 All of my projects are available at www.hasnat4763.me<br><br>💬 Ask me about Python, Godot, Electronics, and Fabric modding maybe<br><br>📫 How to reach me abulhasnat5737@gmail.com<br><br>⚡ Fun fact I think I am dumber than all
 
 
 ## 🌐 Socials:

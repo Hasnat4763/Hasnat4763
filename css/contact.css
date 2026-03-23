@@ -11,49 +11,49 @@
     src: url(fonts/playwrite.ttf);
 }
 
-/* css variables matching main theme */
 :root {
-    --primary-color: #667eea;
-    --secondary-color: #764ba2;
-    --accent-color: #f093fb;
-    --bg-primary: #0f0f23;
-    --bg-secondary: #1a1a2e;
-    --bg-card: #16213e;
-    --text-primary: #ffffff;
-    --text-secondary: #a0a0a0;
-    --border-color: #2d3748;
-    --shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-    --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.15);
-    --border-radius: 16px;
+    --base-color: #1a202c;
+    --shadow-dark: rgba(0, 0, 0, 0.5);
+    --shadow-light: rgba(255, 255, 255, 0.1);
+    --text-color: #e2e8f0;
+    --border-radius: 61px;
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --shadow-neumorphic-dark: 6px 6px 16px rgba(0, 0, 0, 0.6),
+                               -6px -6px 16px rgba(255, 255, 255, 0.08);
+    --shadow-sm: 4px 4px 10px rgba(0, 0, 0, 0.5),
+                 -4px -4px 10px rgba(255, 255, 255, 0.06);
+    --shadow-inset: inset 6px 6px 16px rgba(0, 0, 0, 0.6),
+                    inset -6px -6px 16px rgba(255, 255, 255, 0.08);
+    --shadow-sm-inset: inset 4px 4px 10px rgba(0, 0, 0, 0.5),
+                       inset -4px -4px 10px rgba(255, 255, 255, 0.06);
 }
 
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
-    color: var(--text-primary);
+    background: var(--base-color);
+    color: var(--text-color);
     min-height: 100vh;
     margin: 0;
     padding: 0;
 }
 
-.heda {
+.headar {
     font-size: 28px;
     font-weight: 600;
     text-align: center;
-    color: var(--text-primary);
+    color: var(--text-color);
     margin-bottom: 1rem;
 }
 
 .contactinfo {
-    background: var(--bg-card);
-    border: 1px solid var(--border-color);
+    background: var(--base-color);
+    border: none;
     border-radius: var(--border-radius);
     margin: 3rem auto;
     max-width: 700px;
     padding: 3rem;
     text-align: center;
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow-sm);
     position: relative;
     overflow: hidden;
 }
@@ -65,18 +65,18 @@ body {
     left: 0;
     right: 0;
     height: 4px;
-    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    background: var(--base-color);
 }
 
 .contactinfo p {
     font-size: 18px;
-    color: var(--text-secondary);
+    color: var(--text-color);
     margin: 1.5rem 0;
 }
 
 .contactinfo h2 {
     font-size: 22px;
-    color: var(--text-primary);
+    color: var(--text-color);
     margin: 2rem 0 1rem 0;
     font-weight: 600;
 }
@@ -96,14 +96,13 @@ body {
 }
 
 .contactinfo img {
-    width: 60px;
-    height: 60px;
+    width: 100px;
+    height: 100px;
     padding: 1rem;
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--base-color);
     border-radius: 12px;
-    border: 1px solid var(--border-color);
+    border: none;
     transition: var(--transition);
-    filter: brightness(0.9);
 }
 
 .contactinfo a {
@@ -112,28 +111,25 @@ body {
 }
 
 .contactinfo a:hover img {
-    transform: translateY(-4px) scale(1.1);
-    box-shadow: var(--shadow-light);
+    box-shadow: var(--shadow-sm-inset);
     filter: brightness(1.2);
-    background: rgba(102, 126, 234, 0.1);
+    background: var(--base-color);
 }
 
-/* special styling for email link */
 .contactinfo a[href^="mailto:"] img {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background: var(--base-color);
     border: none;
     padding: 1.2rem;
 }
 
 .contactinfo a[href^="mailto:"]:hover img {
-    background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+    background: var(--base-color);
 }
 
 html {
     scroll-behavior: smooth;
 }
 
-/* responsive design */
 @media (max-width: 768px) {
     .contactinfo {
         margin: 2rem 1rem;
@@ -150,7 +146,7 @@ html {
         padding: 0.8rem;
     }
     
-    .heda {
+    .headar {
         font-size: 24px;
     }
     

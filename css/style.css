@@ -1,4 +1,3 @@
-/* modern typography and design system */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 @font-face{
@@ -11,21 +10,21 @@
     src: url(fonts/playwrite.ttf);
 }
 
-/* css variables for consistent theming */
 :root {
-    --primary-color: #667eea;
-    --secondary-color: #764ba2;
-    --accent-color: #f093fb;
-    --bg-primary: #0f0f23;
-    --bg-secondary: #1a1a2e;
-    --bg-card: #16213e;
-    --text-primary: #ffffff;
-    --text-secondary: #a0a0a0;
-    --border-color: #2d3748;
-    --shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-    --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.15);
-    --border-radius: 16px;
+    --base-color: #1a202c;
+    --shadow-dark: rgba(0, 0, 0, 0.5);
+    --shadow-light: rgba(255, 255, 255, 0.1);
+    --text-color: #e2e8f0;
+    --border-radius: 20px;
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --shadow-neumorphic-dark: 6px 6px 16px rgba(0, 0, 0, 0.6),
+                               -6px -6px 16px rgba(255, 255, 255, 0.08);
+    --shadow-sm: 4px 4px 10px rgba(0, 0, 0, 0.5),
+                 -4px -4px 10px rgba(255, 255, 255, 0.06);
+    --shadow-inset: inset 6px 6px 16px rgba(0, 0, 0, 0.6),
+                    inset -6px -6px 16px rgba(255, 255, 255, 0.08);
+    --shadow-sm-inset: inset 4px 4px 10px rgba(0, 0, 0, 0.5),
+                       inset -4px -4px 10px rgba(255, 255, 255, 0.06);
 }
 
 * {
@@ -36,23 +35,22 @@
 
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
-    color: var(--text-primary);
+    background: var(--base-color);
+    color: var(--text-color);
     line-height: 1.6;
     font-size: 16px;
     min-height: 100vh;
 }
 
-/* modern navigation */
 .Nav {
-    background: rgba(22, 33, 62, 0.95);
-    backdrop-filter: blur(20px);
-    border: 1px solid var(--border-color);
-    border-radius: var(--border-radius);
+    background: var(--base-color);
+    backdrop-filter: none;
+    border: none;
+    border-radius: 24px;
     margin: 2rem auto;
     max-width: 800px;
-    padding: 1rem 2rem;
-    box-shadow: var(--shadow-light);
+    padding: 1.5rem 2rem;
+    box-shadow: var(--shadow-neumorphic-dark);
     position: sticky;
     top: 2rem;
     z-index: 100;
@@ -72,59 +70,45 @@ body {
 }
 
 .Nav a {
-    color: var(--text-secondary);
+    color: var(--text-color);
     text-decoration: none;
     font-weight: 500;
     font-size: 16px;
     padding: 0.75rem 1.5rem;
-    border-radius: 12px;
+    border: none;
+    background: var(--base-color);
+    box-shadow: var(--shadow-sm);
     transition: var(--transition);
-    position: relative;
-    overflow: hidden;
 }
 
 .Nav a::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
-    transition: var(--transition);
-    z-index: -1;
+    display:none;
 }
 
 .Nav a:hover {
-    color: var(--text-primary);
-    transform: translateY(-2px);
+    color: var(--text-color);
+    box-shadow: var(--shadow-sm-inset);
+    transform: none;
 }
 
 .Nav a:hover::before {
-    left: 0;
+    display: none;
 }
 
-/* modern section styling */
 .Introduction, .tech {
-    background: var(--bg-card);
-    border: 1px solid var(--border-color);
-    border-radius: var(--border-radius);
+    background: var(--base-color);
+    border:none;
+    border-radius: 24px;
     margin: 3rem auto;
     max-width: 900px;
     padding: 3rem;
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow-neumorphic-dark);
     position: relative;
     overflow: hidden;
 }
 
 .Introduction::before, .tech::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    display: none;
 }
 
 .Introduction {
@@ -136,11 +120,12 @@ body {
     font-size: 24px;
     font-weight: 600;
     margin-bottom: 1rem;
-    color: white;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--text-color);
+    background: var(--base-color);
     img {
-        border-radius: 30px;
-        border: 2px solid black;
+        border-radius: 20px;
+        border: none;
+        box-shadow: var(--shadow-sm);
     }
 }
 
@@ -148,26 +133,26 @@ body {
     font-size: 18px;
     font-family: 'Inter', sans-serif;
     line-height: 1.8;
-    color: var(--text-primary);
+    color: var(--text-color);
 }
 
-
-/* modern mark styling */
 mark {
     padding: 0.75rem 1.25rem;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    color: whitesmoke;
-    border-radius: 6px;
+    background: var(--base-color);
+    color: var(--text-color);
+    border-radius: 12px;
     font-weight: 500;
+    box-shadow: var(--shadow-sm);
 }
 mark.expand {
     display: block;
     margin: 1rem;
-    padding: 0.75rem 1.25rem;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    color: whitesmoke;
-    border-radius: 6px;
+    padding: 1rem 1.5rem;
+    background: var(--base-color);
+    color: var(--text-color);
+    border-radius: 12px;
     font-weight: 500;
+    box-shadow: var(--shadow-sm);
 }
 
 .tech {
@@ -186,72 +171,57 @@ mark.expand {
     font-weight: 500;
 }
 
-/* icon styling */
 .tech img {
     margin: 0.5rem;
     padding: 1rem;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 12px;
-    border: 1px solid var(--border-color);
+    background: var(--base-color);
+    border-radius: 16px;
+    border: none;
     transition: var(--transition);
-    filter: brightness(0.9);
+    box-shadow: var(--shadow-sm);
+    filter: none;
 }
 
 .tech img:hover {
-    transform: translateY(-4px) scale(1.05);
-    box-shadow: var(--shadow-light);
-    filter: brightness(1.1);
+    transform: none;
+    box-shadow: var(--shadow-sm-inset);
+    filter: none;
 }
 
-/* badge and external image styling */
 .tech img[src*="waka.hackclub.com"],
 .tech img[src*="shields.io"],
 .tech img[src*="pcgamebenchmark.com"] {
-    background: none;
+    background: var(--base-color);
     border: none;
     padding: 0.5rem;
     margin: 0.5rem;
     border-radius: 8px;
+    box-shadow: var(--shadow-sm);
+}
+.tech img[src*="waka.hackclub.com"]:hover,
+.tech img[src*="shields.io"]:hover,
+.tech img[src*="pcgamebenchmark.com"]:hover {
+    box-shadow: var(--shadow-sm-inset);
 }
 
-/* modern footer */
 footer {
-    background: var(--bg-card);
-    border: 1px solid var(--border-color);
-    border-radius: var(--border-radius);
+    background: var(--base-color);
+    border: none;
+    border-radius: 24px;
     margin: 3rem auto 2rem;
     max-width: 600px;
     padding: 1.5rem;
     text-align: center;
     font-size: 14px;
-    color: var(--text-secondary);
-    box-shadow: var(--shadow-light);
+    color: var(--text-color);
+    box-shadow: var(--shadow-neumorphic-dark);
 }
 
-/* smooth scrolling */
+
 html {
     scroll-behavior: smooth;
 }
 
-/* custom scrollbar */
-::-webkit-scrollbar {
-    width: 8px;
-}
-
-::-webkit-scrollbar-track {
-    background: var(--bg-primary);
-}
-
-::-webkit-scrollbar-thumb {
-    background: linear-gradient(var(--primary-color), var(--secondary-color));
-    border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(var(--secondary-color), var(--accent-color));
-}
-
-/* responsive design */
 @media (max-width: 768px) {
     .Nav {
         margin: 1rem;
@@ -271,7 +241,8 @@ html {
         text-align: center;
         img {
         border-radius: 40px;
-        border: 2px solid black;
+        border: none;
+        box-shadow: var(--shadow-sm);
         }
     }
     

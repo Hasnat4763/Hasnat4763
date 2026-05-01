@@ -11,23 +11,40 @@
         <link rel="manifest" href="favicons/site.webmanifest">
     </head>
 <body>
-    <div class = "Nav">
-        <ul>
-            <li><a href = "#Introduction">About</a></li>
-            <li><a href = "#tech">My Tech Stacks</a></li>
-            <li><a href = "projects.html">Projects</a></li>
-            <li><a href = "contact.html">Contact</a></li>
-        </ul>
-    </div>
-    <div id = "Introduction" class = "Introduction">
-        <img src="icons/photo.svg" alt="Profile Photo" width="150" height="150">
-        <p>
-            I am Abul Hasnat. I am a student of Comilla Zilla School. I like to code in Python, play games
-            and tweak with electronics.
-            <br>
-            I am also a robotics enthusiast. I like to learn by trying and failing. I am also into scouting and I have achieved Shapla Cub Award, Community Development Scout Award and President's Scout Award.
-        </p>
-    </div>
+    <nav class = "navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                Hasnat
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#about">About</a> </li>
+                <li><a href="#tech">Tech Stack</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact me!</a></li>
+            </ul>
+            <div class="social-icons">
+                <a href="https://discord.com/users/724093511770570765"><img src="icons/discord.svg" alt="Discord"></a>
+                <a href="https://instagram.com/hasnat4763.me"><img src="icons/instagram.svg" alt="Instagram"></a>
+            </div>
+        </div>
+        
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Building software <br> products, <span class="accent">one line at a time</span> </h1>
+            <p>A robotics enthusiast and developer from Bangladesh, I specialize in Python and Electronics.</p>
+            <div class="hero-cta">
+                <input type="email" placeholder="Enter your email">
+                <button>Contact me!</button>
+            </div>
+        
+        </div>
+        <div class="hero-image">
+            <img src="icons/hasnat4763.png" alt="ME!">
+        </div>
+    </section>
+    
     <div id = "tech" class = "tech">
         <h3>
             <mark class="expand">My Tech Stack</mark>

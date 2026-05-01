@@ -152,7 +152,7 @@ body {
     max-width: 1200px;
     margin: 4rem auto;
     padding: 4rem 2rem;
-    min-height: calc(100vh-70px);
+    min-height: calc(100vh - 70px);
 }
 
 .hero-content {
@@ -163,7 +163,7 @@ body {
 }
 
 .hero-content h1 {
-    font-size: 1.125rem;
+    font-size: 3.5rem;
     font-weight: 800;
     line-height: 1.2;
     color: var(--text-primary);
@@ -242,7 +242,7 @@ body {
     border: 1px solid var(--border-color);
 }
 
-.hero-cta img:hover {
+.hero-image img:hover {
     transform: translateY(-10px);
     box-shadow: 0 30px 80px rgba(99, 102, 241, 0.5);
 }
@@ -263,8 +263,8 @@ body {
 
 mark {
     padding: 0.75rem 1.25rem;
-    background: var(--base-color);
-    color: var(--text-color);
+    background: var(--bg-card);
+    color: var(--text-primary);
     border-radius: 12px;
     font-weight: 500;
     box-shadow: var(--shadow-sm);
@@ -273,8 +273,8 @@ mark.expand {
     display: block;
     margin: 1rem;
     padding: 1rem 1.5rem;
-    background: var(--base-color);
-    color: var(--text-color);
+    background: var(--bg-card);
+    color: var(--text-primary);
     border-radius: 12px;
     font-weight: 500;
     box-shadow: var(--shadow-sm);
@@ -282,7 +282,7 @@ mark.expand {
 
 .tech {
     text-align: center;
-    background: var(--base-color);
+    background: var(--bg-dark);
     border:none;
     border-radius: 24px;
     margin: 3rem auto;
@@ -308,7 +308,7 @@ mark.expand {
 .tech img {
     margin: 0.5rem;
     padding: 1rem;
-    background: var(--base-color);
+    background: var(--bg-card);
     border-radius: 16px;
     border: none;
     transition: var(--transition);
@@ -339,7 +339,7 @@ mark.expand {
 }
 
 footer {
-    background: var(--base-color);
+    background: var(--bg-card);
     border: none;
     border-radius: 24px;
     margin: 3rem auto 2rem;
@@ -347,7 +347,7 @@ footer {
     padding: 1.5rem;
     text-align: center;
     font-size: 14px;
-    color: var(--text-color);
+    color: var(--text-primary);
     box-shadow: var(--shadow-neumorphic-dark);
 }
 

@@ -184,6 +184,12 @@ body {
     max-width: 500px;
 }
 
+.hero-cta {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
 .hero-cta input {
     flex: 1;
     padding: 1rem 1.5rem;

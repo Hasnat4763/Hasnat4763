@@ -11,14 +11,24 @@
     <title>contact me!</title>
 </head>
 <body>
-<div class = "Nav">
-    <ul>
-        <li><a href = "index.html">About</a></li>
-        <li><a href = "index.html#tech">My Tech Stacks</a></li>
-        <li><a href = "projects.html">Projects</a></li>
-        <li><a href = "contact.html">Contact</a></li>
-    </ul>
-</div>
+<nav class = "navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                Hasnat
+            </div>
+            <ul class="nav-menu">
+                <li><a href="./index.html#about">About</a> </li>
+                <li><a href="./index.html#tech">Tech Stack</a></li>
+                <li><a href="./projects.html">Projects</a></li>
+                <li><a href="./contact.html">Contact me!</a></li>
+            </ul>
+            <div class="social-icons">
+                <a href="https://discord.com/users/724093511770570765"><img src="./icons/discord.svg" alt="Discord"></a>
+                <a href="https://instagram.com/hasnat4763.me"><img src="./icons/instagram.svg" alt="Instagram"></a>
+            </div>
+        </div>
+        
+    </nav>
 
 <div id = "contactinfo" class = "contactinfo">
     <h3 class = "headar">Wanna Contact me?</h3>
@@ -28,12 +38,20 @@
     <ul>
         <li><a href = "https://www.discordapp.com/users/724093511770570765"> <img src="icons/discord.svg"> </a></li>
         <li><a href = "https://www.instagram.com/hasnat4763.me/"> <img src="icons/instagram.svg"> </a></li>
-        <li><a href = "https://github.com/Hasnat4763"> <img src = "icons/github-square.svg"></a></li>
+        <li><a href = "https://github.com/Hasnat4763"> <img src = "icons/github.svg"></a></li>
     </ul>
-    <h2>
-        If you want then you can also mail me
-    </h2>
-    <a href = "mailto:abulhasnat5737@gmail.com"><img src ="icons/mail.svg"></a>
+    <div class="hero-cta">
+        <p>Send me an Email on contact@hasnat4763.me or use this form here</p>
+        <form action="https://formspree.io/f/xgodvpyz" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter Your Name">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter Your Email">
+            <label for="message">Message:</label>
+            <input type="text" id="message" class="message" name="message" placeholder="Enter Your Message">
+            <button type="submit" class="send" id="send-email">Contact me!</button>
+        </form>
+    </div>
 </div>
 <footer>© 2026 Hasnat. All rights reserved.</footer>
 </body>

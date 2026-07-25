@@ -145,15 +145,13 @@ body {
 }
 
 .hero {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    max-width: 1200px;
-    margin: 4rem auto;
-    padding: 4rem 2rem;
-    min-height: calc(100vh - 70px);
+    min-height: 80vh;
+    padding: 2rem;
 }
+
 
 .hero-content {
     display: flex;
@@ -184,38 +182,6 @@ body {
     max-width: 500px;
 }
 
-.hero-image {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.hero-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 16px;
-    box-shadow: 0 20px 60px rgba(99, 102, 241, 0.3);
-    transition: var(--transition);
-    border: 1px solid var(--border-color);
-}
-
-.hero-image img:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 30px 80px rgba(99, 102, 241, 0.5);
-}
-
-.hero-image::before {
-    content: '';
-    position: absolute;
-    width: 300px;
-    height: 300px;
-    background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
-    border-radius: 50%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: -1;
-}
 
 
 mark {

@@ -3,23 +3,23 @@
     font-size: 30px;
 }
 
-.rickroll{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    video{
-        width: 6in;
-        height: 4in;
-    }
-}
 .back{
-    margin-top: 5in;
     text-align: center;
     font-size: 2cm;
-    a{
-        color: black;
+    button{
+        border: none;
+        color: white;
+        background-color: black;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 50px;
+        margin: 6px 4px;
+        cursor: pointer;
     }
-    a:hover{
-        color:aqua;
+    button:hover{
+        color:black;
+        background-color: white;
     }
 }
